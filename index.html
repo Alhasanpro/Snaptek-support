@@ -387,6 +387,56 @@
     }
     .perm-list li b { color: var(--ink); font-weight: 700; }
 
+    /* --- Privacy Policy --- */
+    .privacy-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 36px 36px 32px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+    .privacy-meta {
+      display: inline-block;
+      background: var(--lavender-soft);
+      color: var(--lavender-ink);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .privacy-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 26px 0 8px;
+      letter-spacing: -0.01em;
+    }
+    .privacy-card h3:first-of-type { margin-top: 6px; }
+    .privacy-card p {
+      margin: 0 0 12px;
+      color: var(--ink-2);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .privacy-card ul {
+      margin: 6px 0 14px;
+      padding-left: 22px;
+      color: var(--ink-2);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    .privacy-card ul li { margin-bottom: 6px; }
+    .privacy-card ul li b { color: var(--ink); font-weight: 700; }
+    .privacy-card a { color: var(--lavender-ink); font-weight: 600; }
+
+    @media (max-width: 720px) {
+      .privacy-card { padding: 26px 22px; }
+    }
+
     /* --- Footer --- */
     .footer {
       margin-top: 72px;
@@ -512,6 +562,7 @@
       <nav class="topnav" aria-label="Primary">
         <a href="#contact">Contact</a>
         <a href="#faq">FAQ</a>
+        <a href="#privacy">Privacy</a>
       </nav>
     </header>
 
@@ -717,6 +768,61 @@
           Email alhasanps@gmail.com
         </a>
       </div>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section class="section" id="privacy">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Privacy <span class="accent">policy</span></h2>
+          <p class="section-sub">Designed with privacy at its core. Your data stays on your device.</p>
+        </div>
+      </div>
+
+      <article class="privacy-card">
+        <span class="privacy-meta">Last updated · April 26, 2026</span>
+
+        <h3>Overview</h3>
+        <p>Snaptek is designed with your privacy at its core. We collect only the minimum data necessary to provide the app's features. Your screenshots, cards, and personal data remain on your device unless you explicitly enable iCloud sync.</p>
+
+        <h3>Data we collect</h3>
+        <ul>
+          <li><b>Account information.</b> When you sign in with Apple, we receive your Apple ID identifier and, optionally, your name and email. We do not share this information with third parties.</li>
+          <li><b>Photos and camera.</b> Images you capture or import are processed entirely on your device using on-device OCR. We never upload your images to external servers.</li>
+          <li><b>Location.</b> When enabled, your approximate location is captured at the time of scanning to add place context to cards. Location data is stored locally on your device.</li>
+          <li><b>Extracted text and metadata.</b> OCR text, detected links, tags, and social media information are generated and stored locally on your device.</li>
+        </ul>
+
+        <h3>iCloud sync</h3>
+        <p>If you enable iCloud sync (Pro feature), your cards, folders, and associated data are synced through your personal iCloud account using Apple's CloudKit framework. This data is protected by Apple's iCloud security and encryption. We do not have access to your iCloud data.</p>
+
+        <h3>On-device processing</h3>
+        <p>All image analysis, text recognition (OCR), social media detection, and content extraction happen entirely on your device. No images or extracted content are sent to external servers or AI services.</p>
+
+        <h3>Third-party services</h3>
+        <p>Snaptek does not use third-party analytics, advertising SDKs, or tracking services. We do not sell, share, or monetize your data in any way.</p>
+
+        <h3>Data storage &amp; deletion</h3>
+        <p>All app data is stored locally on your device using Apple's SwiftData framework. If iCloud sync is enabled, a copy is stored in your personal iCloud account. You can delete any card or folder at any time. Signing out removes your local account data. Deleting the app removes all local data permanently.</p>
+
+        <h3>Permissions</h3>
+        <p>Snaptek requests the following permissions, each for a specific purpose:</p>
+        <ul>
+          <li><b>Camera</b> — to capture photos for creating cards.</li>
+          <li><b>Photo Library</b> — to import existing screenshots and images.</li>
+          <li><b>Location</b> — to add place context to captured cards.</li>
+        </ul>
+        <p>You can revoke any permission at any time in iOS Settings.</p>
+
+        <h3>Children's privacy</h3>
+        <p>Snaptek is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+        <h3>Changes to this policy</h3>
+        <p>We may update this Privacy Policy from time to time. Changes will be reflected in the app with an updated date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h3>Contact</h3>
+        <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:alhasanps@gmail.com">alhasanps@gmail.com</a>.</p>
+      </article>
     </section>
 
     <!-- Footer -->
