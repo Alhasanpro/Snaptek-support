@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snaptek Support — Save anything worth remembering</title>
+  <meta name="description" content="Help, FAQs, and contact for Snaptek — the smart screenshot manager that turns screenshots, places, profiles, and links into clean cards you can find again." />
+  <meta name="theme-color" content="#F5F0E6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Snaptek Support" />
+  <meta property="og:description" content="Need a hand with Snaptek? FAQs, troubleshooting, and how to get in touch." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Inter only -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F5F0E6;            /* warm cream */
+      --bg-soft: #FBF7EF;
+      --ink: #14110F;           /* near-black for chunky display */
+      --ink-2: #2A2622;
+      --muted: #7B7269;
+      --line: #ECE4D6;
+
+      --lavender: #8C7FE0;      /* primary accent (heading word) */
+      --lavender-soft: #EFEAFA;
+      --lavender-ink: #5A4DBC;
+
+      --peach: #F4B594;
+      --peach-soft: #FCEAD6;
+      --orange: #EF8B4F;
+      --orange-ink: #C95F1B;
+
+      --mint: #7AD7C5;
+      --mint-soft: #DBF5EF;
+      --sky: #6CC2EB;
+      --sky-soft: #DDEFFA;
+      --rose: #E15B4D;
+      --rose-soft: #FBE2DE;
+
+      --shadow-card: 0 1px 0 rgba(0,0,0,0.02), 0 8px 24px rgba(20,17,15,0.06);
+      --shadow-sticker: 0 6px 18px rgba(20,17,15,0.10);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --radius-sm: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--ink-2);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.55;
+      font-size: 17px;
+      overflow-x: hidden;
+      font-feature-settings: "cv11", "ss01", "ss03";
+    }
+
+    a { color: var(--lavender-ink); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 28px 22px 80px;
+      position: relative;
+    }
+
+    /* --- Top bar --- */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 4px 0;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .brand-mark {
+      width: 36px; height: 36px;
+      border-radius: 9px;
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 6px rgba(20,17,15,0.10);
+      overflow: hidden;
+    }
+    .brand-mark svg, .brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+    /* App icon — used in hero too */
+    .app-icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(20,17,15,0.18);
+      display: inline-block;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+    .app-icon svg, .app-icon img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+    /* App Store badge */
+    .appstore-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(20,17,15,0.18);
+      transition: transform .15s ease;
+    }
+    .appstore-badge:hover { transform: translateY(-1px); text-decoration: none; color: #fff; }
+    .appstore-badge .as-apple { width: 22px; height: 26px; flex-shrink: 0; }
+    .appstore-badge .as-text { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+    .appstore-badge .as-text small { font-size: 11px; opacity: .8; font-weight: 500; letter-spacing: 0.02em; }
+    .appstore-badge .as-text span { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+    .topnav a {
+      color: var(--ink-2);
+      font-weight: 600;
+      font-size: 15px;
+      margin-left: 18px;
+    }
+    .topnav a:hover { color: var(--lavender-ink); text-decoration: none; }
+
+    /* --- Hero --- */
+    .hero {
+      position: relative;
+      padding: 56px 6px 24px;
+    }
+    .eyebrow {
+      display: inline-block;
+      background: var(--lavender-soft);
+      color: var(--lavender-ink);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    h1.display {
+      font-family: "Inter", sans-serif;
+      font-weight: 800;
+      color: var(--ink);
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      margin: 0 0 18px;
+    }
+    h1.display .accent {
+      color: var(--lavender);
+      display: block;
+    }
+    .lede {
+      font-size: clamp(17px, 2.1vw, 19px);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 0 28px;
+    }
+
+    /* Sticker — accent badge (Inter, tight) */
+    .sticker {
+      position: absolute;
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      background: var(--lavender-soft);
+      color: var(--lavender-ink);
+      padding: 8px 14px 9px;
+      border-radius: 999px;
+      box-shadow: var(--shadow-sticker);
+      transform: rotate(-3deg);
+      font-size: 14px;
+      letter-spacing: -0.005em;
+      line-height: 1.2;
+      border: 2px solid #fff;
+      white-space: nowrap;
+    }
+    .sticker .heart { display:inline-block; margin-right: 6px; transform: translateY(2px); }
+    .sticker.hero-sticker {
+      right: 14px;
+      top: 90px;
+      transform: rotate(6deg);
+    }
+
+    /* --- Hero CTAs --- */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(20,17,15,0.18);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(20,17,15,0.22);
+      text-decoration: none;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: var(--ink);
+      box-shadow: var(--shadow-card);
+    }
+    .btn-secondary:hover { transform: translateY(-1px); text-decoration: none; }
+
+    .btn svg { width: 18px; height: 18px; }
+
+    /* --- Section heading --- */
+    .section { padding: 56px 4px 0; }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+    h2.section-title {
+      font-weight: 800;
+      font-size: clamp(28px, 4.4vw, 38px);
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.1;
+    }
+    h2.section-title .accent { color: var(--lavender); }
+    .section-sub {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 6px 0 0;
+    }
+
+    /* --- Contact card --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .contact-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card .pill {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .contact-card.email .pill { background: var(--lavender-soft); color: var(--lavender-ink); }
+    .contact-card.response .pill { background: var(--peach-soft); color: var(--orange-ink); }
+    .contact-card h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .contact-card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+    .contact-card .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--ink);
+      background: var(--bg);
+      padding: 10px 14px;
+      border-radius: 12px;
+    }
+    .contact-card .email-link:hover { background: var(--lavender-soft); color: var(--lavender-ink); text-decoration: none; }
+
+    /* --- FAQ as folder cards --- */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .folder {
+      position: relative;
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px 22px 22px;
+      box-shadow: var(--shadow-card);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .folder:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(20,17,15,0.10); }
+
+    /* the 'tab' on top of a folder card, like the iOS folder graphic */
+    .folder::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 22px;
+      width: 70px;
+      height: 18px;
+      border-radius: 10px 10px 0 0;
+      background: inherit;
+      box-shadow: inherit;
+    }
+
+    .folder.lavender { background: var(--lavender-soft); }
+    .folder.peach    { background: var(--peach-soft); }
+    .folder.mint     { background: var(--mint-soft); }
+    .folder.sky      { background: var(--sky-soft); }
+    .folder.rose     { background: var(--rose-soft); }
+    .folder.cream    { background: #FFF8EB; }
+
+    .folder .icon {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.7);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8);
+    }
+    .folder .icon svg { width: 20px; height: 20px; }
+
+    .folder h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink);
+      margin: 0 0 8px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .folder p {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .folder p + p { margin-top: 8px; }
+
+    /* full-width folder for longer answers */
+    .folder.wide { grid-column: 1 / -1; }
+
+    /* --- Permissions block --- */
+    .perm-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 18px;
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .perm-list li {
+      font-size: 15px;
+      color: var(--ink-2);
+      display: flex;
+      gap: 8px;
+    }
+    .perm-list li b { color: var(--ink); font-weight: 700; }
+
+    /* --- Footer --- */
+    .footer {
+      margin-top: 72px;
+      padding: 36px 4px 0;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .foot-tag {
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+      color: var(--lavender-ink);
+    }
+    .foot-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .foot-links a { color: var(--ink-2); font-weight: 600; margin-left: 14px; font-size: 14px; }
+
+    /* --- decorative blobs/sparkles --- */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: .55;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .blob.lav { width: 320px; height: 320px; background: #D9CFFB; top: -80px; right: -120px; }
+    .blob.peach { width: 280px; height: 280px; background: #FBE0CC; bottom: -120px; left: -100px; }
+
+    .sparkle {
+      position: absolute;
+      pointer-events: none;
+      opacity: .9;
+    }
+    .sparkle.s1 { left: 10px; top: 230px; }
+    .sparkle.s2 { right: 22%; top: 18px; }
+
+    /* --- Responsive --- */
+    @media (max-width: 720px) {
+      .wrap { padding: 22px 18px 60px; }
+      .hero { padding-top: 36px; }
+      h1.display { font-size: 44px; }
+      .contact-grid, .faq-grid { grid-template-columns: 1fr; }
+      .perm-list { grid-template-columns: 1fr; }
+      .sticker.hero-sticker { right: 8px; top: 70px; font-size: 18px; padding: 8px 12px; }
+      .topnav { display: none; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="blob lav" aria-hidden="true"></div>
+    <div class="blob peach" aria-hidden="true"></div>
+
+    <!-- decorative sparkles like the App Store screenshots -->
+    <svg class="sparkle s1" width="38" height="38" viewBox="0 0 38 38" aria-hidden="true">
+      <path d="M19 2 L21 16 L35 19 L21 22 L19 36 L17 22 L3 19 L17 16 Z" fill="#F2C94C"/>
+    </svg>
+    <svg class="sparkle s2" width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+      <path d="M11 1 L12 9 L20 11 L12 13 L11 21 L10 13 L2 11 L10 9 Z" fill="#F2C94C"/>
+    </svg>
+
+    <header class="topbar">
+      <a class="brand" href="#">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="icon-img" src="icon.png" alt="" onerror="this.replaceWith(this.nextElementSibling.content.cloneNode(true))">
+          <template>
+          <!-- Snaptek app icon (faithful inline SVG fallback) -->
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="iconBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FAFAFA"/>
+                <stop offset="55%" stop-color="#E5E5E5"/>
+                <stop offset="100%" stop-color="#B8B8B8"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="1024" height="1024" rx="230" ry="230" fill="url(#iconBg)"/>
+            <!-- Camera body (chunky outlined) -->
+            <path d="M260 360
+                     h120 l60 -60 h160 l60 60 h120
+                     a40 40 0 0 1 40 40
+                     v300
+                     a40 40 0 0 1 -40 40
+                     h-520
+                     a40 40 0 0 1 -40 -40
+                     v-300
+                     a40 40 0 0 1 40 -40 z
+                     m0 70
+                     a-30 30 0 0 0 -30 30
+                     v240
+                     a30 30 0 0 0 30 30
+                     h520
+                     a30 30 0 0 0 30 -30
+                     v-240
+                     a30 30 0 0 0 -30 -30
+                     h-150
+                     l-60 -60
+                     h-130
+                     l-60 60 z"
+                  fill="#1A1A1A" fill-rule="evenodd"/>
+            <!-- Lens (donut) -->
+            <path d="M520 430 a130 130 0 1 1 -0.01 0 z m0 60 a70 70 0 1 0 0.01 0 z"
+                  fill="#1A1A1A" fill-rule="evenodd"/>
+            <!-- Big sparkle (upper right) -->
+            <path d="M770 200 L805 290 L895 325 L805 360 L770 450 L735 360 L645 325 L735 290 Z"
+                  fill="#1A1A1A"/>
+            <!-- Small sparkle -->
+            <path d="M860 430 L880 480 L930 500 L880 520 L860 570 L840 520 L790 500 L840 480 Z"
+                  fill="#1A1A1A"/>
+          </svg>
+          </template>
+        </span>
+        Snaptek
+      </a>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <span class="app-icon" aria-label="Snaptek app icon">
+        <img class="icon-img" src="icon.png" alt="" onerror="this.replaceWith(this.nextElementSibling.content.cloneNode(true))">
+        <template>
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="iconBgHero" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FAFAFA"/>
+              <stop offset="55%" stop-color="#E5E5E5"/>
+              <stop offset="100%" stop-color="#B8B8B8"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="1024" height="1024" rx="230" ry="230" fill="url(#iconBgHero)"/>
+          <path d="M260 360 h120 l60 -60 h160 l60 60 h120 a40 40 0 0 1 40 40 v300 a40 40 0 0 1 -40 40 h-520 a40 40 0 0 1 -40 -40 v-300 a40 40 0 0 1 40 -40 z m0 70 a-30 30 0 0 0 -30 30 v240 a30 30 0 0 0 30 30 h520 a30 30 0 0 0 30 -30 v-240 a30 30 0 0 0 -30 -30 h-150 l-60 -60 h-130 l-60 60 z" fill="#1A1A1A" fill-rule="evenodd"/>
+          <path d="M520 430 a130 130 0 1 1 -0.01 0 z m0 60 a70 70 0 1 0 0.01 0 z" fill="#1A1A1A" fill-rule="evenodd"/>
+          <path d="M770 200 L805 290 L895 325 L805 360 L770 450 L735 360 L645 325 L735 290 Z" fill="#1A1A1A"/>
+          <path d="M860 430 L880 480 L930 500 L880 520 L860 570 L840 520 L790 500 L840 480 Z" fill="#1A1A1A"/>
+        </svg>
+        </template>
+      </span>
+
+      <span class="eyebrow">Snaptek Support</span>
+      <h1 class="display">
+        Need a hand?
+        <span class="accent">We've got you.</span>
+      </h1>
+      <p class="lede">
+        Snaptek turns screenshots, places, profiles, and links into clean cards you can find again. If something's not behaving, here's how to get unstuck — and how to reach a human.
+      </p>
+
+      <div class="cta-row">
+        <a class="appstore-badge" href="#" aria-label="Snaptek on the App Store (coming soon)">
+          <svg class="as-apple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 12" fill="none" aria-hidden="true">
+            <path d="M9.68722 4.09304C9.63265 4.12646 8.33362 4.83186 8.33362 6.39589C8.39485 8.17957 9.97294 8.80509 10 8.80509C9.97294 8.83852 9.76176 9.65721 9.1362 10.5154C8.63975 11.2547 8.08873 12 7.25199 12C6.45607 12 6.17035 11.5073 5.25198 11.5073C4.26574 11.5073 3.98668 12 3.23157 12C2.39483 12 1.803 11.2147 1.27948 10.4824C0.599355 9.52395 0.0212699 8.01982 0.000861672 6.5756C-0.0128917 5.8103 0.137064 5.05802 0.517722 4.41904C1.05499 3.52699 2.01418 2.92143 3.06165 2.90146C3.86423 2.87498 4.57851 3.4406 5.06831 3.4406C5.5377 3.4406 6.41525 2.90146 7.40816 2.90146C7.83673 2.9019 8.97959 3.02822 9.68722 4.09304ZM5.00043 2.74866C4.85757 2.04978 5.25198 1.35089 5.61933 0.905079C6.08872 0.365938 6.83007 0 7.46938 0C7.5102 0.698886 7.25155 1.38432 6.78926 1.88352C6.37444 2.42266 5.66015 2.82853 5.00043 2.74866Z" fill="currentColor"/>
+          </svg>
+          <span class="as-text">
+            <small>Coming soon to the</small>
+            <span>App Store</span>
+          </span>
+        </a>
+        <a class="btn btn-primary" href="mailto:alhasanps@gmail.com?subject=Snaptek%20support">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          Email support
+        </a>
+        <a class="btn btn-secondary" href="#faq">
+          Browse FAQ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="sticker hero-sticker">
+        <span class="heart" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#5A4DBC" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-8.5C.5 9 2.5 5 6.5 5 9 5 10.5 6.5 12 8.5 13.5 6.5 15 5 17.5 5c4 0 6 4 4 7.5C19 16.65 12 21 12 21z"/></svg>
+        </span>
+        Capture today, find forever.
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Get in <span class="accent">touch</span></h2>
+          <p class="section-sub">A real person reads every email. We'll do our best to help quickly.</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card email">
+          <span class="pill">Email</span>
+          <h3>Talk to us directly</h3>
+          <p>Bug reports, feature requests, billing questions — anything Snaptek-related.</p>
+          <a class="email-link" href="mailto:alhasanps@gmail.com?subject=Snaptek%20support">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+            alhasanps@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-card response">
+          <span class="pill">Response time</span>
+          <h3>Usually within 1–2 days</h3>
+          <p>Snaptek is a small, indie operation. Including your iOS version, app version, and a short description (or screenshot!) helps us solve issues faster.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Frequently asked <span class="accent">questions</span></h2>
+          <p class="section-sub">Tap the question that matches your situation.</p>
+        </div>
+      </div>
+
+      <div class="faq-grid">
+
+        <article class="folder lavender">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#5A4DBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4 2.2c-.9.5-1.5 1-1.5 2.3"/><circle cx="12" cy="17" r="0.6" fill="#5A4DBC"/></svg>
+          </div>
+          <h3>What is Snaptek?</h3>
+          <p>Snaptek is an iOS app that turns screenshots, places, profiles, and links into clean, searchable cards. It reads what's inside an image, organizes it into folders automatically, and connects it to actions like "open in Maps" or "save contact."</p>
+        </article>
+
+        <article class="folder peach">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C95F1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 v4 M12 18 v4 M2 12 h4 M18 12 h4 M5 5 l2.5 2.5 M16.5 16.5 L19 19 M5 19 l2.5 -2.5 M16.5 7.5 L19 5"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>How does AI processing work?</h3>
+          <p>When you capture or import an image, Snaptek runs OCR + entity detection on-device to extract text, usernames, phone numbers, addresses, and links. It then enriches the result — for example turning a restaurant name into a Maps link — and assigns the card to the right folder.</p>
+        </article>
+
+        <article class="folder mint">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0E8E76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h6l2 2h10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"/></svg>
+          </div>
+          <h3>Why didn't my screenshot land in the right folder?</h3>
+          <p>Auto-classification picks the most likely folder based on what was detected. If it gets it wrong, long-press the card and choose <b>Move to folder</b> — Snaptek learns from your overrides.</p>
+          <p>You can also create a folder manually from the <b>Folders</b> tab using the <b>+</b> button in the top-right.</p>
+        </article>
+
+        <article class="folder sky">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A6FA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 0 1 4-4 6 6 0 0 1 11.6-1.5A4.5 4.5 0 0 1 18 18H7a4 4 0 0 1-4-3z"/></svg>
+          </div>
+          <h3>What is iCloud Sync, and how do I turn it on?</h3>
+          <p>iCloud Sync is a Pro feature that keeps your cards and folders synced across your iPhone, iPad, and other Apple devices signed into the same iCloud account.</p>
+          <p>Enable it from <b>Settings → iCloud Sync</b>. The first sync hydrates progressively — large libraries may take a few minutes to fully appear.</p>
+        </article>
+
+        <article class="folder rose">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B83A2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Pro plan, pricing, and refunds</h3>
+          <p>Snaptek Pro unlocks iCloud Sync, advanced AI recognition, and unlimited processing. Plans:</p>
+          <p><b>$3 / 3 months</b> &nbsp;·&nbsp; <b>$6 lifetime</b></p>
+          <p>Subscriptions and purchases are handled by Apple. To request a refund, use Apple's <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">Report a Problem</a> page — Apple processes refunds, not Snaptek.</p>
+        </article>
+
+        <article class="folder cream">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#A1801A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </div>
+          <h3>Smart Search isn't finding old screenshots</h3>
+          <p>Indexing runs in the background and pauses when your iPhone is locked or low on battery. Plug in, leave the app open, and pull-to-refresh on the <b>Recent</b> tab to kick it forward.</p>
+          <p>Searching by visible text, tags, categories, and locations is supported.</p>
+        </article>
+
+        <article class="folder lavender wide">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#5A4DBC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+          </div>
+          <h3>Permissions — what does Snaptek ask for, and why?</h3>
+          <ul class="perm-list">
+            <li><b>Photos</b>&nbsp;— to import and process the screenshots you choose.</li>
+            <li><b>Camera</b>&nbsp;— so you can capture new content directly inside the app.</li>
+            <li><b>Location</b>&nbsp;— optional, used to attach a place to a card and power city-based folders.</li>
+            <li><b>Notifications</b>&nbsp;— optional, used for reminders tied to saved content (e.g. "you saved this restaurant nearby").</li>
+          </ul>
+          <p style="margin-top:14px">You can grant or revoke any of these any time in <b>iOS Settings → Snaptek</b>.</p>
+        </article>
+
+        <article class="folder peach">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C95F1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg>
+          </div>
+          <h3>Delete a card or folder</h3>
+          <p>Swipe a card left and tap <b>Delete</b>. To delete a folder, open it, tap the <b>•••</b> menu, then <b>Delete folder</b>. Cards inside a deleted folder return to <b>Recent</b> — they're not erased unless you delete them too.</p>
+        </article>
+
+        <article class="folder mint">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0E8E76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+          </div>
+          <h3>Privacy — where does my data go?</h3>
+          <p>Image recognition runs on your device. With iCloud Sync off, nothing leaves your iPhone. With iCloud Sync on, your cards and folders are stored in your private iCloud container — not on Snaptek servers.</p>
+        </article>
+
+        <article class="folder sky">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1A6FA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg>
+          </div>
+          <h3>Restore purchases on a new device</h3>
+          <p>Sign in with the same Apple ID you used to buy Snaptek Pro, open <b>Settings → Restore Purchases</b>, and your subscription / lifetime unlock will reappear.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Still stuck CTA -->
+    <section class="section">
+      <div class="contact-card" style="text-align:center; padding: 36px 24px;">
+        <h3 style="font-size:24px; margin-bottom: 6px;">Still stuck?</h3>
+        <p style="margin-bottom: 18px;">Send us a note — include your iOS version, Snaptek version, and a short description of what happened.</p>
+        <a class="btn btn-primary" href="mailto:alhasanps@gmail.com?subject=Snaptek%20support">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          Email alhasanps@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="foot-tag">Save anything worth remembering ✨</div>
+      <div class="foot-meta">© <span id="yr"></span> Snaptek. Made with care.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
